@@ -6,6 +6,7 @@ interface ICreateCarDTO {
   fine_amount: number;
   brand: string;
   category_id: string;
+  id?: string;
 }
 
 export { ICreateCarDTO };
