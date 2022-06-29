@@ -3,14 +3,13 @@ import "express-async-errors";
 import swaggerUi from "swagger-ui-express";
 import "reflect-metadata";
 
-// eslint-disable-next-line import-helpers/order-imports
-import swaggerFile from "../../swagger.json";
-import "../container";
-import "./typeorm";
+import swaggerFile from "../../../swagger.json";
+import "../../container";
+import { AppError } from "../../errors/AppError";
+import createConnection from "../typeorm/index";
+import { router } from "./routes";
 
-import { AppError } from "../errors/AppError";
-import { router } from "./http/routes";
-
+createConnection();
 const app = express();
 
 app.use(express.json());
