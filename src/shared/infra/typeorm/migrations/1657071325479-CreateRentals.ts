@@ -33,7 +33,7 @@ export class CreateRentals1657071325479 implements MigrationInterface {
             type: "timestamp",
           },
           {
-            name: "toral",
+            name: "total",
             type: "numeric",
           },
           {
